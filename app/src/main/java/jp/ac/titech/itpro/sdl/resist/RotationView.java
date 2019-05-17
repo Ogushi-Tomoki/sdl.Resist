@@ -51,8 +51,14 @@ class RotationView extends View {
         canvas.drawLine(cx, cy, x, y, paint);
     }
 
-    void setDirection(double th) {
-        direction = th - Math.PI / 2;
+//    void setDirection(double th) {
+//        direction = th - Math.PI / 2;
+//        invalidate();
+//    }
+
+    //changed setDirection()
+    void setDirection(double th){
+        direction += th;
         invalidate();
     }
 }
